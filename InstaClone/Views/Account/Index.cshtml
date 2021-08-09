@@ -1,0 +1,27 @@
+﻿@using System.Security.Cryptography
+@model RegisterViewModel
+
+@{
+    ViewData["Title"] = "تشکر";
+}
+
+<h1>تشکر از ثبت نام</h1>
+
+<br />
+@{
+    if (Model != null)
+    {
+        <div class="alert-success">
+            <h6>تشکر از ثبت نام شما @Model.UserName عزیز!</h6>
+            <p>میتوانید از لینک زیر وارد شوید</p>
+            <a asp-action="Login" asp-controller="Account">ورود به سایت</a>
+        </div>
+    }
+    else
+    {
+        <h1>سلام</h1>
+        <h3>به دنبال چه اینجا آمده ای؟</h3>
+    }
+}
+
+

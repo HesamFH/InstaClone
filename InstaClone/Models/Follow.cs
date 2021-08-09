@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace InstaClone.Models
 {
-    public class Posts
+    public class Follow
     {
-        [Key]
-        public int PostId { get; set; }
+        [Required]
+        public int FollowerId { get; set; }
 
         [Required]
-        public int UserId { get; set; }
-
-
-        public Users User { get; set; }
+        public int FollowedUserId { get; set; }
     }
 }
